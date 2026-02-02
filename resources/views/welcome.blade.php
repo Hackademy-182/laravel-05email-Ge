@@ -1,5 +1,5 @@
 <x-layout>
-    <h1 class="text-danger">Chi siamo</h1>
-    <h3>contact</h3>
-
+    <x-topbar />
+    <h1>Manicolandia 🎭</h1>
+    <p>Video “dirvedenti” + comicità assurda.</p>
 </x-layout>
