@@ -17,21 +17,12 @@ class ContactMail extends Mailable
      */
     public function __construct(public array $data) {}
 
-    public function build()
-    {
-        return $this->subject('Contatto Manicolandia')
-            ->view('emails.contact')
-            ->with(['data' => $this->data]);
-    }
-
     /**
      * Get the message envelope.
      */
     public function envelope(): Envelope
     {
-        return new Envelope(
-            subject: 'Contact Mail',
-        );
+        return new Envelope(subject: 'Contatto Manicolandia');
     }
 
     /**
@@ -39,9 +30,7 @@ class ContactMail extends Mailable
      */
     public function content(): Content
     {
-        return new Content(
-            view: 'view.name',
-        );
+        return new Content(view: 'emails.contact', with: ['data' => $this->data]);
     }
 
     /**
