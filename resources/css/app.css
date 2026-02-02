@@ -1,2 +1,52 @@
 @import "bootstrap";
 @import "./style.css";
+
+.page-bg {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.page-bg-default {
+    background-image: url("https://picsum.photos/200/300");
+}
+.page-bg-home {
+    background-image: url("https://picsum.photos/200/300");
+}
+.page-bg-contact {
+    background-image: url("https://picsum.photos/200/300");
+}
+.page-bg::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    pointer-events: none;
+}
+
+.chaos {
+    background: linear-gradient(120deg, #ff00cc, #00fff0, #ffe600);
+    background-size: 200% 200%;
+    animation: bg 8s ease infinite;
+}
+@keyframes bg {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.card.chaos-card {
+    transform: rotate(-1deg);
+    box-shadow: 0 14px 0 rgba(0, 0, 0, 0.35);
+    border: 3px solid #000;
+}
+.chaos-card:hover {
+    transform: rotate(1deg) scale(1.01);
+}
+.neon {
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}

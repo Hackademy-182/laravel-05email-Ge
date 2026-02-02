@@ -8,4 +8,9 @@ class pageController extends Controller
     {
         return view('home');
     }
+
+    public function forum()
+    {
+        return view('forum');
+    }
 }

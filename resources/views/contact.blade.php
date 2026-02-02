@@ -1,4 +1,4 @@
-<x-layout><x-topbar /><x-flash />
+<x-layout bg="contact"><x-topbar /><x-flash />
     <h1>Contatti</h1>
     <form method="POST" action="{{ route('contact.store') }}">@csrf
         <input type="text" name="name" value="{{ old('name') }}" class="form-control mb-2" placeholder="Nome">

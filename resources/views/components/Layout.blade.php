@@ -7,6 +7,8 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="p-4">{{ $slot }}</body>
+<body class="p-4 chaos">
+    {{ $slot }}
+</body>
 
 </html>
